@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: 'Lucida sans';
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.container{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fcff47;
+	overflow: hidden;
+}
+.container .login,
+.container .signup{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 400px;
+	height: 500px;
+	background-color: #fff;
+	box-shadow: 0 15px 30px rgba(0,0,0,0.3);	
+}
+.container .login{
+	display: flex;
+	transition: 1s;
+}
+.container .signup{
+	display: none;
+    transition: 1s;
+}
+
+.container .login form h1,
+.container .signup form h1{
+	color: #333;
+	font-size: 50px;
+	font-weight: 800;
+	text-align: center;
+	letter-spacing: 1px;
+	margin-bottom: 20px;	
+}
+.container .login form input,
+.container .signup form input{
+	padding: 10px; 
+	width: 100%;
+	margin: 10px 0;
+	border: none;
+	outline: none;
+	background-color: #d0d0d0;
+}
+.container .login form input[type="submit"],
+.container .signup form input[type="submit"]{
+	background-color: #3150eb;
+	max-width: 40%;
+	margin-bottom: 15px;
+	color: #fff;
+	font-weight: 600;
+	letter-spacing: 1px;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.5); 
+}
+.container .login form input[type="submit"]:active,
+.container .signup form input[type="submit"]:active{
+	background-color: #273eb0;
+}
+.container .login form p,
+.container .signup form p{
+	font-size: 12px;
+    padding-right: 50px; 
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.container .login form p a,
+.container .signup form p a{
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 900;    	
+}
+.container .signup{
+	display: none;
+}
+</style>    
+</head>
+<body>
+ <div class="container" id="login">
+  <a href="index.html" style="padding: 10px 10px; margin: 30px;font-family: 'Lucida sans'; background: dodgerblue; color: #fff; text-decoration: none;z-index: 1000; position: absolute;top:0; left: 0;">Back to home</a>
+   <div class="login">
+   <form>   
+      <h1>Login</h1><br>
+      <input type="text" placeholder="Username" required=""><br>
+      <input type="password" placeholder="Password" required=""><br>
+      <input type="submit" value="Login" onclick="redirect();"><br>
+      <p>DON'T HAVE AN ACCOUNT ? <a href="#" onclick="myFunction()">SIGNUP</a></p>
+   </form>
+    </div>
+    <div class="signup">
+   <form>   
+      <h1>SIGNUP</h1><br>
+      <input type="text" placeholder="Username" required=""><br>
+      <input type="email" placeholder="Email" required=""><br>
+      <input type="password" placeholder="Password" required=""><br>
+      <input type="password" placeholder="Confirm Password" required=""><br>
+      <input type="submit" value="Signup" onclick="myFunction()"><br>
+      <p>ALREADY HAVE AN ACCOUNT ? <a href="#" onclick="myFunction()">LOGIN</a></p>
+   </form>
+    </div>
+</div>
+<script type="text/javascript">
+function myFunction() {
+  var x = document.querySelector(".login");
+  var y = document.querySelector(".signup");  
+  if (x.style.display === "none") {
+    x.style.display = "flex";
+    y.style.display = "none";
+  } else {
+    x.style.display = "none";
+    y.style.display = "flex";
+  }
+}
+</script>
+<script type="text/javascript" language="javascript">
+function redirect()
+{
+    window.location.href="menu.html";
+}
+</script>
+</body>
+</html>
