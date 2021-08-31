@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>contact us</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+
+  <style>
+  
+  * {
+  box-sizing: border-box;
+  top:0px;
+}
+.top{
+  text-align: center;
+  background-color: #80BD9E;}
+.row{
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+.row .img{
+  width: 50%;
+  height: 100%;
+}
+.column{
+  width: 50%;
+  height: 100%; 
+  padding: 20px;
+  box-sizing: border-box;
+  background-color:#89DA59;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=submit] {
+  background-color: #f98866;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 900px) {
+  .row{
+    height: auto;
+  }
+  .column{
+    width: 100%;
+    margin-top: 0;
+  }
+  .img{
+    display: none;
+  }
+}
+  
+  </style>
+<div class="container">
+  <div class="top">
+    <h2>Contact Us</h2>
+    <p>Swing by for a cup of coffee, or leave us a message:</p>
+  </div>
+  <div class="row">
+    <div class="img">
+      <img src="http://www.bpimaging.com/assets/uploads/2016/12/toronto-food-pita.jpg" style="width:100%" height="100%">
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="states">State</label>
+        <select id="states" name="states">
+          <option value="maharashtra">Maharashtra</option>
+          <option value="odisha">Odisha</option>
+          <option value="madras">Madras</option>
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        
+        <input type="submit"  onclick="window.alert('Submitted Sucessfully!!')" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
