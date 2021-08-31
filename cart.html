@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>delivery page</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+  }
+ .main{
+  background-color: dodgerblue;
+  margin:30px;
+  padding: 50px;
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Lucida sans';
+ }
+ .main form{
+  width: 80%;
+  background-color: rgba(0,0,0,0.5);
+  padding: 20px;
+ }
+ .main form label{
+  margin: 30px 10px;
+ }
+ .main input{
+  width: 70%;
+  border:none;
+  outline: none;
+  background-color: transparent;
+  padding: 10px;
+  border-bottom: 2px solid #fff; 
+  height: 20px;
+  margin: 10px;
+ }
+ .main input[type="button"]{
+  margin: 0;
+  height: auto;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  font-size: 15px;
+  background-color: #0f0; 
+  width: 100px;
+  border-radius: 5px;
+  font-weight: 600;
+ }
+ a{
+  text-decoration: none;
+  margin: 0;
+  height: auto;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  font-size: 15px;
+  background-color: #0f0; 
+  width: 100px;
+  border-radius: 5px;
+  font-weight: 600;
+ }
+ @media (max-width: 1000px){
+ body{
+  background-color: dodgerblue;
+ }
+ .main{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+ }
+ .main form{
+  width: 100%;
+  background-color: transparent;
+  padding: 20px;
+ }
+ }
+</style>
+</head>
+<body>
+
+<div class="main">
+<form>
+  <br><br>  
+  <label> Name: </label>
+    <br>
+  <input type="text" placeholder="Name" required="please fill details">
+    <br><br>
+  <label> Email: </label>
+    <br>
+  <input type="text" placeholder="Email">
+  <br><br>
+  <label> Phone Number: </label>
+    <br>
+  <input type="number" placeholder="Phone Number">
+    <br><br>    
+    <label>  Street Name: </label>
+    <br>
+  <input type="text" placeholder=" Street Name" required="please fill details">
+    <br><br>
+    <label> City: </label>
+    <br>
+  <input type="text" placeholder="City" required="please fill details">
+    <br><br>
+    <label> State: </label>
+    <br>
+  <input type="State" placeholder="State" required="please fill details">
+    <br><br>
+    <label> Pincode: </label>
+    <br>
+  <input type="number" placeholder="Pin Code" required="please fill details">
+    <br><br>
+  <input type="button" onclick="window.alert('Added to Cart Sucessfully!!')" value="Continue">
+     <a href="page.html">Back to home</a>
+  </form>
+</div>
+
+
+  </body>
+</html>
