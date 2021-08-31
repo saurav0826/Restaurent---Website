@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Restaurent</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+<script src="https://kit.fontawesome.com/81eb497617.js" crossorigin="anonymous"></script>
+  <script>
+  function closeNav() {
+  document.getElementById("mySidenav").style.height = "0";
+}
+  function openNav() {
+  document.getElementById("mySidenav").style.height = "550px";
+}    
+  </script>
+<style type="text/css">
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: url("https://www.elitetraveler.com/wp-content/uploads/2007/02/Alain-Ducasse-768x512.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left; 
+  height: 100vh;
+}
+h1{
+  color: #fff;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 5em;
+  text-align: center;
+  font-family: 'sofia';
+  text-shadow: 10px 10px 30px rgba(0,0,0,1);
+}
+h2{
+  color: #fff;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 3em;
+  text-align: center;
+  font-family: 'Lucida sans';
+  text-shadow: 10px 10px 30px rgba(0,0,0,1);
+}
+.sidenav {
+  height: 70px; 
+  margin: 30px;
+  display: flex;
+  justify-content: center;  
+  z-index: 100;
+  transition: 0.5s;
+  }
+.sidenav ul{
+  list-style-type: none;
+  display: flex;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 50px;
+}  
+.sidenav ul li a{
+  padding: 20px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'Lucida sans';
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+  border-radius: 50px;
+}
+.sidenav a:hover {
+  background-color: #fff;
+  color: #000;
+}
+.sidenav .closebtn{
+  display: none;
+  position: relative;
+  left: 10px;
+  top: -25px;
+  padding: 0;
+  font-size: 25px;
+  margin: 20px 0;
+  border-radius: 40%;
+}
+.button{
+  display: none;
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  color: #fff;
+  font-size: 25px;
+}
+.box{ 
+  margin: 150px 450px;              
+  width: 600px;
+  height: 300px;
+  overflow: contain;
+}
+.box img{
+ width: 800px;
+ height: 400px;
+ overflow: hidden;
+ border-radius: 40px;
+}
+@media only screen and (max-width: 1000px){
+.sidenav{
+  height: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.8);
+  overflow: hidden;
+  border-radius: 10px;  
+  }
+.sidenav ul{
+  display: flex;
+  flex-direction: column;
+  border-radius: 0px;
+}
+.sidenav ul li:nth-child(2){
+  margin-top: 0px; 
+}  
+.sidenav ul li a{
+  font-size: 35px;
+  border-radius: 0px;
+}
+.sidenav .closebtn{
+  display: inline-block;
+}
+.button{
+  display: inline-block;
+  font-size: 30px;
+}
+}    
+</style>
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+  <ul>
+   <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav();" style="font-size: 50px;">&times;</a></li>
+   <li><a href="menu.html">Menu</a></li>
+   <li><a href="login.html">Reservations</a></li>
+   <li><a href="login.html">Login</a></li>
+   <li><a href="contact.html">Contact</a></li>
+   <li><a href="about.html">About Us</a></li>
+</div>
+  <h1>The Restaurant<br>Shreyash</h1>
+  <h2>Homestyle Meals Everyday</h2>
+  
+  <div id="button" class="button">
+  <span onclick="openNav()"><i class="fas fa-bars"></i></span>
+</div>
+  </body>
+</html>
